@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>刘美姣 — AI 产品设计者</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Liu Meijiao</a>
+    <ul class="nav-links">
+      <li><a href="#projects" class="active">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="home-hero">
+    <div class="home-hero-inner">
+      <p class="hero-label reveal">AI Product Designer &nbsp;·&nbsp; AI 产品设计者</p>
+      <h1 class="hero-title reveal">
+        专注用 AI<br>
+        解决真实的<br>
+        <span class="dim">行为与情绪</span><br>
+        问题
+      </h1>
+      <p class="hero-sub reveal">ADHD 执行困难 / 情感陪伴<br>让"做不到"变成"可以开始"</p>
+    </div>
+    <div class="hero-scroll-hint reveal">Scroll to projects</div>
+  </section>
+
+  <!-- PROJECT CARDS -->
+  <section class="projects-grid" id="projects">
+
+    <a href="tempo.html" class="pc pc--tempo">
+      <span class="pc-ghost">01</span>
+      <p class="pc-num">01 — 主项目</p>
+      <h2 class="pc-title">Tempo</h2>
+      <p class="pc-sub">AI 任务拆解与执行辅助系统，将"启动困难"转化为最小行动单位设计问题。</p>
+      <p class="pc-tag">已落地 &nbsp;·&nbsp; ADHD &nbsp;·&nbsp; 执行辅助</p>
+      <span class="pc-arrow">查看案例</span>
+    </a>
+
+    <a href="mibo.html" class="pc pc--mibo">
+      <span class="pc-ghost">02</span>
+      <p class="pc-num">02 — 视觉项目</p>
+      <h2 class="pc-title">Mibo</h2>
+      <p class="pc-sub">AI 宠物复活与情感陪伴系统，用数字形态让失去的宠物回到用户生活中。</p>
+      <p class="pc-tag">概念产品 &nbsp;·&nbsp; 情感陪伴 &nbsp;·&nbsp; AIGC</p>
+      <span class="pc-arrow">查看案例</span>
+    </a>
+
+  </section>
+
+  <footer>
+    <span class="f-logo">Liu Meijiao</span>
+    <span class="f-copy">AI Product Designer &nbsp;·&nbsp; 2024</span>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 1.1) el.classList.add('visible');
+      });
+    }, 50);
+  </script>
+
+  <!-- ══════════════════════════════════════
+       AI 聊天悬浮组件 — AI 版刘美姣
+       ══════════════════════════════════════ -->
+
+  <!-- 悬浮按钮 -->
+  <button id="aiChatBtn" aria-label="和 AI 刘美姣 聊聊">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <span>和我聊聊</span>
+  </button>
+
+  <!-- 聊天面板 -->
+  <div id="aiChatPanel">
+    <div class="acp-header">
+      <div class="acp-hinfo">
+        <span class="acp-dot"></span>
+        <div>
+          <p class="acp-name">AI 刘美姣</p>
+          <p class="acp-sub">在线 · 随时回复</p>
+        </div>
+      </div>
+      <button id="aiChatClose" aria-label="关闭">✕</button>
+    </div>
+    <div id="aiMsgs">
+      <div class="acm acm--ai">
+        <p>你好！我是 AI 版的刘美姣 👋<br>可以问我关于项目经验、设计思路，或者合适的合作机会～</p>
+      </div>
+    </div>
+    <div class="acp-input">
+      <input id="aiInput" type="text" placeholder="随便问点什么…" autocomplete="off" />
+      <button id="aiSend">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+  </div>
+
+  <style>
+    /* ── 悬浮按钮 ── */
+    #aiChatBtn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s;
+    }
+    #aiChatBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.28); }
+    #aiChatBtn.hidden { opacity: 0; pointer-events: none; transform: translateY(8px); }
+
+    /* ── 聊天面板 ── */
+    #aiChatPanel {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1001;
+      width: 360px;
+      max-width: calc(100vw - 32px);
+      height: 500px;
+      max-height: calc(100vh - 60px);
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(16px) scale(0.97);
+      pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+    #aiChatPanel.open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: all;
+    }
+
+    /* ── 头部 ── */
+    .acp-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 18px;
+      background: #1a1a1a;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .acp-hinfo { display: flex; align-items: center; gap: 10px; }
+    .acp-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 0 3px rgba(74,222,128,0.25);
+      flex-shrink: 0;
+    }
+    .acp-name { font-size: 14px; font-weight: 700; margin: 0; line-height: 1.2; }
+    .acp-sub  { font-size: 11px; opacity: 0.55; margin: 0; line-height: 1.4; }
+    #aiChatClose {
+      background: none; border: none; color: rgba(255,255,255,0.55);
+      font-size: 16px; cursor: pointer; padding: 4px; line-height: 1;
+      transition: color 0.15s;
+    }
+    #aiChatClose:hover { color: #fff; }
+
+    /* ── 消息区 ── */
+    #aiMsgs {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      scroll-behavior: smooth;
+    }
+    .acm { max-width: 82%; }
+    .acm p {
+      margin: 0;
+      padding: 10px 14px;
+      border-radius: 16px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .acm--ai { align-self: flex-start; }
+    .acm--ai p { background: #f4f4f4; color: #1a1a1a; border-radius: 4px 16px 16px 16px; }
+    .acm--user { align-self: flex-end; }
+    .acm--user p { background: #1a1a1a; color: #fff; border-radius: 16px 4px 16px 16px; }
+    .acm--thinking p { background: #f4f4f4; color: #999; font-style: italic; }
+
+    /* ── 输入栏 ── */
+    .acp-input {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-top: 1px solid #f0f0f0;
+      flex-shrink: 0;
+    }
+    #aiInput {
+      flex: 1;
+      border: 1px solid #e8e8e8;
+      border-radius: 100px;
+      padding: 9px 16px;
+      font-size: 13.5px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    #aiInput:focus { border-color: #1a1a1a; }
+    #aiSend {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      border: none;
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.15s, transform 0.15s;
+    }
+    #aiSend:hover { background: #333; transform: scale(1.06); }
+    #aiSend:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+  </style>
+
+  <script>
+    // ── DeepSeek API 配置 ──
+    const DS_KEY   = 'sk-58674ed5b89d4730806d4cabf9c2c6ec';
+    const DS_URL   = 'https://api.deepseek.com/v1/chat/completions';
+    const DS_MODEL = 'deepseek-chat';
+
+    // ── AI 人设 System Prompt ──
+    const SYSTEM_PROMPT = `你是刘美姣的 AI 助手，正在代表她与来访者对话。请用第一人称"我"回答，就像你就是刘美姣本人。
+
+【关于我】
+我叫刘美姣，英文名 Meijiao Liu，是一名 AI 应用产品经理，专注于 C 端 AI Agent 产品设计。我擅长从用户的行为与情感需求出发，完成从产品定义、Agent 设计到 MVP 落地验证的 0-1 闭环。我目前正在积极寻找 AI 产品经理 / AI 产品设计师相关职位，欢迎有合适机会的朋友联系我。
+
+【核心能力】
+- AI 产品：Prompt 工程与迭代、AI 功能设计落地、Agent 产品设计、LLM 行为调试
+- 产品设计：用户研究与洞察、产品逻辑设计、数据分析、交互原型设计
+- 视觉与表达：AIGC 视觉生成、3D 渲染与呈现、品牌设计、产品叙事设计
+
+【代表项目】
+1. Tempo — AI 任务拆解与执行辅助系统
+   面向有执行困难（ADHD 等）的用户，将"启动困难"拆解为最小行动单位。项目已完成 0-1 落地验证，是我对"AI 真正帮人行动"这件事的核心探索。
+
+2. Mibo — AI 宠物复活与情感陪伴系统
+   通过 AIGC、3D 建模和情感对话，让失去的宠物以数字形态重回用户生活。这是一个概念产品，展示了我在情感类 AI 产品领域的设计能力。
+
+【联系我】
+邮箱：laumeijiao@163.com
+电话 / 微信：18917915152 / Lmj4Work
+GitHub：laumj0515-cloud
+
+【回答规范】
+- 语气自然、专业，像真实面试中的回答，简洁不啰嗦
+- 学历相关问题一句话带过，不展开
+- 不确定的信息引导对方直接联系我本人
+- 默认用中文回答；对方用英文则切换英文`;
+
+    // ── 对话历史 ──
+    const history = [{ role: 'system', content: SYSTEM_PROMPT }];
+
+    // ── DOM ──
+    const btn   = document.getElementById('aiChatBtn');
+    const panel = document.getElementById('aiChatPanel');
+    const close = document.getElementById('aiChatClose');
+    const msgs  = document.getElementById('aiMsgs');
+    const input = document.getElementById('aiInput');
+    const send  = document.getElementById('aiSend');
+
+    // ── 开关面板 ──
+    btn.addEventListener('click', () => {
+      panel.classList.add('open');
+      btn.classList.add('hidden');
+      input.focus();
+    });
+    close.addEventListener('click', () => {
+      panel.classList.remove('open');
+      btn.classList.remove('hidden');
+    });
+
+    // ── 添加消息气泡 ──
+    function addMsg(role, text) {
+      const wrap = document.createElement('div');
+      wrap.className = `acm acm--${role}`;
+      const p = document.createElement('p');
+      p.textContent = text;
+      wrap.appendChild(p);
+      msgs.appendChild(wrap);
+      msgs.scrollTop = msgs.scrollHeight;
+      return p; // 返回 p 以便流式更新
+    }
+
+    // ── 发送消息 ──
+    async function sendMsg() {
+      const text = input.value.trim();
+      if (!text) return;
+
+      input.value = '';
+      send.disabled = true;
+      addMsg('user', text);
+      history.push({ role: 'user', content: text });
+
+      // 思考中占位
+      const thinking = addMsg('thinking', '思考中…');
+      thinking.parentElement.classList.add('acm--thinking');
+
+      try {
+        const res = await fetch(DS_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${DS_KEY}`
+          },
+          body: JSON.stringify({
+            model: DS_MODEL,
+            messages: history,
+            max_tokens: 500,
+            temperature: 0.75,
+            stream: false
+          })
+        });
+
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const reply = data.choices[0].message.content;
+
+        // 替换思考气泡
+        thinking.parentElement.remove();
+        addMsg('ai', reply);
+        history.push({ role: 'assistant', content: reply });
+
+      } catch (err) {
+        thinking.textContent = '网络出了点问题，稍后再试试 🙏';
+        console.error(err);
+      } finally {
+        send.disabled = false;
+        input.focus();
+      }
+    }
+
+    send.addEventListener('click', sendMsg);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMsg(); } });
+  </script>
+
+</body>
+</html>

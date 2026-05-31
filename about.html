@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — 刘美姣</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Liu Meijiao</a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="page-hero">
+    <p class="ph-label reveal">About</p>
+    <h1 class="ph-title reveal">刘美姣</h1>
+    <p class="ph-desc reveal">
+      AI 应用产品经理，专注 C 端 AI Agent 产品，擅长从用户行为与情感需求出发，完成从产品定义、Agent 设计到 MVP 落地验证的 0-1 闭环。
+    </p>
+  </header>
+
+  <!-- SKILLS -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="s-num">Skills</span>
+      <h2 class="s-title">能力</h2>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-col">
+        <h3>AI 产品</h3>
+        <ul>
+          <li>Prompt 工程与迭代</li>
+          <li>AI 功能设计落地</li>
+          <li>Agent 产品设计</li>
+          <li>LLM 行为调试</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3>产品设计</h3>
+        <ul>
+          <li>用户研究与洞察</li>
+          <li>产品逻辑设计</li>
+          <li>工具与数据分析</li>
+          <li>交互原型设计</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3>视觉与表达</h3>
+        <ul>
+          <li>AIGC 视觉生成</li>
+          <li>3D 渲染与呈现</li>
+          <li>品牌 / 自主表达</li>
+          <li>产品叙事设计</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section reveal">
+    <h2 class="contact-title">一起做<br>有意义的事情</h2>
+    <div class="contact-links">
+      <a href="mailto:laumeijiao@163.com" class="contact-link">laumeijiao@163.com</a>
+      <a href="tel:18917915152" class="contact-link">18917915152</a>
+      <div class="contact-link" style="cursor:default;">WeChat &nbsp;<strong>Lmj4Work</strong></div>
+      <a href="https://github.com/laumj0515-cloud" target="_blank" class="contact-link">GitHub &nbsp;laumj0515-cloud</a>
+    </div>
+  </section>
+
+  <!-- BACK TO PROJECTS -->
+  <a href="index.html" class="next-card" style="border-top: 1px solid var(--outline);">
+    <p class="nc-label">返回</p>
+    <h2 class="nc-title">查看作品集</h2>
+    <p class="nc-sub">Tempo &nbsp;/&nbsp; Mibo</p>
+    <span class="nc-arrow">回到主页</span>
+  </a>
+
+  <footer>
+    <span class="f-logo">Liu Meijiao</span>
+    <span class="f-copy">AI Product Designer &nbsp;·&nbsp; 2024</span>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 1.1) el.classList.add('visible');
+      });
+    }, 50);
+  </script>
+
+</body>
+</html>

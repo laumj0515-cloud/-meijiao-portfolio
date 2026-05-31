@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempo — 刘美姣</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Liu Meijiao</a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects" class="active">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="page-hero">
+    <p class="ph-label reveal">01 &nbsp;—&nbsp; AI 执行辅助系统 &nbsp;·&nbsp; 已落地</p>
+    <h1 class="ph-title reveal">Tempo</h1>
+    <p class="ph-desc reveal">AI 任务拆解与执行辅助系统，帮助有执行困难的用户从"做不到"变成"可以开始"。</p>
+  </header>
+
+  <!-- MOOD IMAGE 1 — full bleed blue figure -->
+  <div>
+    <img src="assets/temple-mood1.jpg" alt="" class="img-full" style="max-height:70vh; object-fit:cover;">
+  </div>
+
+  <!-- 01 PROBLEM -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="s-num">01</span>
+      <h2 class="s-title">问题定义</h2>
+    </div>
+    <p class="quote-block">
+      解决"启动困难"和"任务执行失败"的问题，让用户从"做不到"变成"可以开始"
+    </p>
+  </section>
+
+  <!-- 02 USERS -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="s-num">02</span>
+      <h2 class="s-title">用户是谁</h2>
+    </div>
+    <div class="user-rows">
+      <div class="user-row">
+        <span class="ur-tag">A</span>
+        <span class="ur-text">ADHD 人群</span>
+      </div>
+      <div class="user-row">
+        <span class="ur-tag">B</span>
+        <span class="ur-text">有执行困难 / 拖延严重的人</span>
+      </div>
+      <div class="user-row">
+        <span class="ur-tag">C</span>
+        <span class="ur-text">情绪 + 行动启动困难用户</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 MECHANISM -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="s-num">03</span>
+      <h2 class="s-title">核心机制</h2>
+    </div>
+    <div class="two-col">
+      <div class="mechanism-text">
+        <p>
+          AI 将任务拆解为<strong>「最低行动单位」</strong>，并通过即时反馈奖励机制推动执行。
+        </p>
+        <p>
+          不是让用户更努力，而是让第一步足够小——小到无法拒绝开始。
+        </p>
+      </div>
+      <div>
+        <p class="examples-label">任务拆解示例</p>
+        <div class="example-row">
+          <span class="ex-from">洗澡</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-to">先坐起来</span>
+        </div>
+        <div class="example-row">
+          <span class="ex-from">写简历</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-to">先打开文档</span>
+        </div>
+        <div class="example-row">
+          <span class="ex-from">回消息</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-to">先打开对话框</span>
+        </div>
+        <div class="example-row">
+          <span class="ex-from">开始运动</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-to">先换上运动服</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT DEMO — two-scenario task decomposition showcase -->
+  <div style="background:#f0f2f8; padding:80px var(--margin) 72px; border-top:1px solid #dde0ee; border-bottom:1px solid #dde0ee;">
+
+    <!-- Section label -->
+    <p style="text-align:center; margin:0 0 48px; font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8b9cc8;">产品界面 &nbsp;—&nbsp; 任务拆解演示</p>
+
+    <!-- Two-column grid -->
+    <div class="tempo-demo-grid">
+
+      <!-- Card A: 写简历 -->
+      <div class="tempo-card">
+        <div class="tdc-header">
+          <span class="tdc-tag">场景 A</span>
+          <span class="tdc-subtitle">工作任务</span>
+        </div>
+        <div class="tdc-input">
+          <span class="tdc-input-icon">📝</span>
+          <span class="tdc-input-text">写简历</span>
+        </div>
+        <div class="tdc-btn">✦ &nbsp;魔法拆解</div>
+        <div class="tdc-divider"></div>
+        <div class="tdc-meta">
+          <span>AI 拆解完成 · 4 步</span>
+          <span class="tdc-progress-num">1 / 4</span>
+        </div>
+        <div class="tdc-progress-bar"><div style="width:25%"></div></div>
+        <div class="tdc-step tdc-step--active">
+          <span class="tdc-snum">01</span>
+          <span class="tdc-stext">先打开一个新文档</span>
+          <span class="tdc-snow">现在 →</span>
+        </div>
+        <div class="tdc-step"><span class="tdc-snum">02</span><span class="tdc-stext tdc-dim">写下名字和联系方式</span></div>
+        <div class="tdc-step"><span class="tdc-snum">03</span><span class="tdc-stext tdc-dim">列出最近一份工作经历</span></div>
+        <div class="tdc-step"><span class="tdc-snum">04</span><span class="tdc-stext tdc-dim">完善技能与项目部分</span></div>
+      </div>
+
+      <!-- Card B: 洗澡 -->
+      <div class="tempo-card">
+        <div class="tdc-header">
+          <span class="tdc-tag">场景 B</span>
+          <span class="tdc-subtitle">日常生活</span>
+        </div>
+        <div class="tdc-input">
+          <span class="tdc-input-icon">🚿</span>
+          <span class="tdc-input-text">去洗澡</span>
+        </div>
+        <div class="tdc-btn">✦ &nbsp;魔法拆解</div>
+        <div class="tdc-divider"></div>
+        <div class="tdc-meta">
+          <span>AI 拆解完成 · 3 步</span>
+          <span class="tdc-progress-num">1 / 3</span>
+        </div>
+        <div class="tdc-progress-bar"><div style="width:33%"></div></div>
+        <div class="tdc-step tdc-step--active">
+          <span class="tdc-snum">01</span>
+          <span class="tdc-stext">先站起来走向浴室</span>
+          <span class="tdc-snow">现在 →</span>
+        </div>
+        <div class="tdc-step"><span class="tdc-snum">02</span><span class="tdc-stext tdc-dim">打开热水等水热</span></div>
+        <div class="tdc-step"><span class="tdc-snum">03</span><span class="tdc-stext tdc-dim">脱衣服进去洗</span></div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; margin:40px 0 0; font-size:11px; letter-spacing:0.06em; color:#8b9cc8;">
+      不管是工作还是日常，Tempo 把<strong style="color:#5c6bc0;">「第一步」</strong>做得足够小——小到无法拒绝开始
+    </p>
+  </div>
+
+  <style>
+    .tempo-demo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .tempo-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 4px 32px rgba(50,70,200,0.09);
+    }
+    .tdc-header { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+    .tdc-tag { font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#5c6bc0; background:#eef0f8; padding:4px 10px; border-radius:20px; }
+    .tdc-subtitle { font-size:11px; color:#9aa0b8; }
+    .tdc-input { display:flex; align-items:center; gap:10px; background:#f0f2f8; border-radius:12px; padding:13px 16px; margin-bottom:14px; }
+    .tdc-input-icon { font-size:18px; line-height:1; }
+    .tdc-input-text { font-size:16px; font-weight:600; color:#1b1c1c; flex:1; }
+    .tdc-btn { background:#5c6bc0; color:#fff; border-radius:10px; padding:13px; text-align:center; font-size:12px; font-weight:700; letter-spacing:0.08em; margin-bottom:20px; }
+    .tdc-divider { height:1px; background:#eef0f8; margin-bottom:16px; }
+    .tdc-meta { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#8b9cc8; }
+    .tdc-progress-num { color:#5c6bc0; }
+    .tdc-progress-bar { height:3px; background:#eef0f8; border-radius:2px; margin-bottom:18px; }
+    .tdc-progress-bar > div { height:100%; background:#5c6bc0; border-radius:2px; }
+    .tdc-step { display:flex; align-items:center; gap:12px; border-radius:10px; padding:13px 14px; margin-bottom:8px; border:1px solid #eef0f8; }
+    .tdc-step:last-child { margin-bottom:0; }
+    .tdc-step--active { background:#5c6bc0; border-color:#5c6bc0; }
+    .tdc-snum { font-size:9px; font-weight:700; color:#c8d0ec; min-width:16px; }
+    .tdc-step--active .tdc-snum { color:rgba(255,255,255,0.5); }
+    .tdc-stext { flex:1; font-size:14px; color:#1b1c1c; font-weight:500; }
+    .tdc-step--active .tdc-stext { color:#fff; font-weight:600; }
+    .tdc-dim { color:#9aa0b8 !important; font-weight:400 !important; }
+    .tdc-snow { background:rgba(255,255,255,0.22); color:#fff; font-size:9px; font-weight:700; letter-spacing:0.1em; padding:4px 9px; border-radius:20px; white-space:nowrap; }
+    @media (max-width: 640px) {
+      .tempo-demo-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- 04 PRODUCT LOOP -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="s-num">04</span>
+      <h2 class="s-title">产品闭环</h2>
+    </div>
+    <div class="loop-wrap">
+      <div class="loop-step">
+        <span class="ls-num">01</span>
+        <div>
+          <p class="ls-title">输入任务</p>
+          <p class="ls-desc">用户告诉 Tempo 今天需要完成什么</p>
+        </div>
+      </div>
+      <div class="loop-step">
+        <span class="ls-num">02</span>
+        <div>
+          <p class="ls-title">AI 拆解步骤</p>
+          <p class="ls-desc">系统将任务分解为最小可执行单位，降低认知负担</p>
+        </div>
+      </div>
+      <div class="loop-step">
+        <span class="ls-num">03</span>
+        <div>
+          <p class="ls-title">用户完成第一步</p>
+          <p class="ls-desc">只需要迈出一步，不需要看到终点</p>
+        </div>
+      </div>
+      <div class="loop-step">
+        <span class="ls-num">04</span>
+        <div>
+          <p class="ls-title">即时反馈 / 奖励</p>
+          <p class="ls-desc">完成即触发游戏化奖励，强化正向行为回路</p>
+        </div>
+      </div>
+      <div class="loop-step">
+        <span class="ls-num">05</span>
+        <div>
+          <p class="ls-title">下一步继续推进</p>
+          <p class="ls-desc">动力积累，自然进入执行轨道，直至完成目标</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 FEATURES — watercolor as background -->
+  <section class="section reveal" style="
+    background-image: url('assets/temple-mood2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  ">
+    <div style="position:relative; z-index:1;">
+      <div class="section-header">
+        <span class="s-num" style="color:rgba(255,255,255,0.5);">05</span>
+        <h2 class="s-title" style="color:#fff;">核心功能</h2>
+      </div>
+      <div class="feature-grid" style="background:transparent; border-color:rgba(255,255,255,0.25);">
+        <div class="feature-item" style="background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.2);">
+          <p class="fi-num" style="color:rgba(255,255,255,0.55);">F · 01</p>
+          <p class="fi-title" style="color:#fff;">AI 任务拆解系统</p>
+        </div>
+        <div class="feature-item" style="background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.2);">
+          <p class="fi-num" style="color:rgba(255,255,255,0.55);">F · 02</p>
+          <p class="fi-title" style="color:#fff;">游戏化奖励反馈机制</p>
+        </div>
+        <div class="feature-item" style="background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.2);">
+          <p class="fi-num" style="color:rgba(255,255,255,0.55);">F · 03</p>
+          <p class="fi-title" style="color:#fff;">月度行为统计 + 情绪/任务回顾</p>
+        </div>
+        <div class="feature-item" style="background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.2);">
+          <p class="fi-num" style="color:rgba(255,255,255,0.55);">F · 04</p>
+          <p class="fi-title" style="color:#fff;">冥想缓解模块</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 HIGHLIGHT — blue figure as background -->
+  <section class="highlight reveal" style="
+    background-image: url('assets/temple-mood1.jpg');
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+  ">
+    <div style="position:absolute;inset:0;background:rgba(30,40,100,0.72);"></div>
+    <div style="position:relative;z-index:1;">
+      <p class="hl-label">Design Insight &nbsp;—&nbsp; 设计亮点</p>
+      <p class="hl-text">
+        把<em>「执行力问题」</em>转化为<br>
+        <strong>「最小行动单位设计问题」</strong>，<br>
+        降低启动门槛。
+      </p>
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <a href="mibo.html" class="next-card">
+    <p class="nc-label">下一个项目</p>
+    <h2 class="nc-title">Mibo</h2>
+    <p class="nc-sub">AI 宠物复活与情感陪伴系统 &nbsp;·&nbsp; 概念产品</p>
+    <span class="nc-arrow">查看案例</span>
+  </a>
+
+  <footer>
+    <span class="f-logo">Liu Meijiao</span>
+    <span class="f-copy">AI Product Designer &nbsp;·&nbsp; 2024</span>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 1.1) el.classList.add('visible');
+      });
+    }, 50);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mibo — 刘美姣</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero--warm .ph-label { color: #9a7f62; }
+    .page-hero--warm .ph-desc  { color: #6b5540; }
+    .mibo-quote-block { border-left-color: #c4a882; }
+    .mibo-user-row:hover { background: #f0e3d0; }
+
+    /* Cat spotlight — centered on warm bg */
+    .cat-spotlight {
+      background: #f0e5d4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px var(--margin);
+      gap: 0;
+      border-bottom: 1px solid #e0d0bc;
+    }
+    .cat-spotlight img {
+      width: auto;
+      max-height: 520px;
+      object-fit: contain;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+    .cat-spotlight-label {
+      position: absolute;
+      bottom: 32px;
+      left: var(--margin);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9a7f62;
+    }
+
+    /* Cat breeds strip */
+    .cat-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #f0e5d4;
+      border-bottom: 1px solid #e0d0bc;
+    }
+    .cat-strip-item {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 64px 40px 0;
+      border-right: 1px solid #e0d0bc;
+    }
+    .cat-strip-item:last-child { border-right: none; }
+    .cat-strip-item img {
+      width: auto;
+      max-height: 380px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Liu Meijiao</a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects" class="active">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="page-hero page-hero--warm">
+    <p class="ph-label reveal">02 &nbsp;—&nbsp; AI 情感陪伴系统 &nbsp;·&nbsp; 概念产品</p>
+    <h1 class="ph-title reveal">Mibo</h1>
+    <p class="ph-desc reveal">用 AI 让失去的宠物以数字形态回到用户生活中，并持续互动。</p>
+  </header>
+
+  <!-- HERO PRODUCT IMAGE -->
+  <div>
+    <img src="assets/mibo-hero.png" alt="Mibo — 产品展示" class="img-full">
+  </div>
+
+  <!-- CAT SPOTLIGHT -->
+  <div class="cat-spotlight" style="position:relative;">
+    <img src="assets/mibo-cat-main.png" alt="Mibo — 3D 数字宠物">
+    <span class="cat-spotlight-label">3D Digital Pet &nbsp;·&nbsp; PBR 超写实渲染</span>
+  </div>
+
+  <!-- 01 CONCEPT -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="s-num">01</span>
+      <h2 class="s-title">一句话概念</h2>
+    </div>
+    <p class="quote-block mibo-quote-block">
+      用 AI 让失去的宠物以数字形态回到用户生活中，并持续互动
+    </p>
+  </section>
+
+  <!-- 02 USERS -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="s-num">02</span>
+      <h2 class="s-title">用户是谁</h2>
+    </div>
+    <div class="user-rows">
+      <div class="user-row mibo-user-row">
+        <span class="ur-tag">A</span>
+        <span class="ur-text">失去宠物的人</span>
+      </div>
+      <div class="user-row mibo-user-row">
+        <span class="ur-tag">B</span>
+        <span class="ur-text">情感依恋强的人</span>
+      </div>
+      <div class="user-row mibo-user-row">
+        <span class="ur-tag">C</span>
+        <span class="ur-text">需要情绪陪伴的人</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMOTIONAL HOOK IMAGE -->
+  <div>
+    <img src="assets/mibo-mood-cat-real.png" alt="" class="img-full" style="max-height:65vh; object-fit:cover; object-position:center 40%;">
+  </div>
+
+  <!-- 03 CORE EXPERIENCE -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="s-num">03</span>
+      <h2 class="s-title">核心体验</h2>
+    </div>
+    <div class="two-col">
+      <div class="mechanism-text">
+        <p>
+          <strong>上传照片 → 生成 3D 宠物 → AI 对话 + 互动</strong>
+        </p>
+        <p>
+          这是一个「情绪延续型 AI 产品设计探索」，将超写实渲染技术与 AI 人格化能力，转化为可感知的情感价值。
+        </p>
+        <p>
+          不是让用户"接受失去"，而是让情感得以延续与陪伴。
+        </p>
+      </div>
+      <div>
+        <p class="examples-label">体验流程</p>
+        <div class="example-row">
+          <span class="ex-from" style="text-decoration:none; color:var(--ink-2);">上传宠物照片</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-to">生成 3D 数字形象</span>
+        </div>
+        <div class="example-row">
+          <span class="ex-from" style="text-decoration:none; color:var(--ink-2);">AI 建模人格</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-to">个性化对话互动</span>
+        </div>
+        <div class="example-row">
+          <span class="ex-from" style="text-decoration:none; color:var(--ink-2);">日常陪伴</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-to">情感持续延续</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENERATION ANIMATION -->
+  <div style="background:#f0e5d4; padding:80px var(--margin); display:flex; flex-direction:column; align-items:center; border-top:1px solid #e0d0bc; border-bottom:1px solid #e0d0bc;">
+    <p style="margin:0 0 48px; font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#9a7f62;">拍照完成 &nbsp;→&nbsp; AI 生成 &nbsp;→&nbsp; 数字形象</p>
+
+    <div class="mgf-frame" id="mgfFrame" data-phase="capture">
+
+      <!-- Top bar -->
+      <div class="mgf-bar">
+        <span class="mgf-bar-dots"><i></i><i></i><i></i></span>
+        <span class="mgf-bar-title">Mibo &nbsp;·&nbsp; 创建数字宠物</span>
+      </div>
+
+      <!-- Image area -->
+      <div class="mgf-imgarea">
+        <!-- Phase 1: real cat photo -->
+        <img src="assets/mibo-mood-cat-real.png" class="mgf-photo" alt="">
+        <!-- viewfinder corners -->
+        <div class="mgf-vf mgf-vf-tl"></div>
+        <div class="mgf-vf mgf-vf-tr"></div>
+        <div class="mgf-vf mgf-vf-bl"></div>
+        <div class="mgf-vf mgf-vf-br"></div>
+        <!-- Phase 2: scan line + grid overlay -->
+        <div class="mgf-scanline"></div>
+        <div class="mgf-gridoverlay"></div>
+        <!-- Phase 3: avatar -->
+        <div class="mgf-avatarbg">
+          <img src="assets/mibo-cat-abyssinian.png" class="mgf-avatarimg" alt="">
+          <div class="mgf-sparkles">
+            <span style="top:12%; left:18%">✦</span>
+            <span style="top:8%;  right:20%">✦</span>
+            <span style="top:55%; left:10%">✦</span>
+            <span style="top:60%; right:12%">✦</span>
+            <span style="top:30%; right:8%">✦</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status bar -->
+      <div class="mgf-statusbar">
+        <div class="mgf-s-capture">📷 &nbsp;<strong>拍照完成</strong>&nbsp; ✓</div>
+        <div class="mgf-s-processing">
+          <div class="mgf-progresstrack"><div class="mgf-progressfill"></div></div>
+          <span class="mgf-proctext">Mibo AI 正在生成数字形象<span class="mgf-ellipsis"></span></span>
+        </div>
+        <div class="mgf-s-complete">✓ &nbsp;<strong>数字形象已生成</strong></div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    /* ── Mibo generation animation ── */
+    .mgf-frame {
+      width: 340px;
+      max-width: 92vw;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(100,60,20,0.18);
+      background: #fff;
+      font-family: inherit;
+    }
+    /* top bar */
+    .mgf-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #faf6f0;
+      padding: 12px 18px;
+      border-bottom: 1px solid #ede0cc;
+    }
+    .mgf-bar-dots { display:flex; gap:5px; }
+    .mgf-bar-dots i { width:8px; height:8px; border-radius:50%; background:#d4b896; display:block; }
+    .mgf-bar-title { font-size:11px; font-weight:600; color:#9a7f62; letter-spacing:0.04em; }
+
+    /* image area */
+    .mgf-imgarea {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: #f0e5d4;
+    }
+    .mgf-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: opacity 0.8s ease, filter 0.8s ease;
+    }
+
+    /* viewfinder corners */
+    .mgf-vf {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-color: rgba(255,255,255,0.9);
+      border-style: solid;
+      transition: opacity 0.4s ease;
+    }
+    .mgf-vf-tl { top:14px; left:14px;  border-width:2px 0 0 2px; }
+    .mgf-vf-tr { top:14px; right:14px; border-width:2px 2px 0 0; }
+    .mgf-vf-bl { bottom:14px; left:14px;  border-width:0 0 2px 2px; }
+    .mgf-vf-br { bottom:14px; right:14px; border-width:0 2px 2px 0; }
+
+    /* scan line */
+    .mgf-scanline {
+      position: absolute;
+      left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, #c4a882 20%, #f5dfc0 50%, #c4a882 80%, transparent 100%);
+      box-shadow: 0 0 16px 4px rgba(196,168,130,0.6);
+      opacity: 0;
+      top: 0;
+      transition: opacity 0.3s ease;
+    }
+    /* grid overlay during processing */
+    .mgf-gridoverlay {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(196,168,130,0.12) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(196,168,130,0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    /* avatar layer */
+    .mgf-avatarbg {
+      position: absolute;
+      inset: 0;
+      background: #f5ede0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.7s ease;
+    }
+    .mgf-avatarimg {
+      width: 75%;
+      height: auto;
+      object-fit: contain;
+      transform: scale(0.85);
+      transition: transform 0.7s cubic-bezier(0.34,1.56,0.64,1), opacity 0.7s ease;
+      opacity: 0;
+      padding-bottom: 8px;
+    }
+    /* sparkles */
+    .mgf-sparkles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .mgf-sparkles span {
+      position: absolute;
+      font-size: 14px;
+      color: #c4a882;
+      opacity: 0;
+      transform: scale(0);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    /* status bar */
+    .mgf-statusbar {
+      padding: 16px 20px;
+      background: #faf6f0;
+      border-top: 1px solid #ede0cc;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+    }
+    .mgf-s-capture, .mgf-s-processing, .mgf-s-complete {
+      width: 100%;
+      font-size: 12px;
+      color: #7a6448;
+      transition: opacity 0.4s ease;
+    }
+    .mgf-s-processing {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .mgf-progresstrack {
+      height: 4px;
+      background: #ede0cc;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .mgf-progressfill {
+      height: 100%;
+      width: 0%;
+      background: #c4a882;
+      border-radius: 2px;
+      transition: width 2.4s linear;
+    }
+    .mgf-proctext { font-size:11px; color:#9a7f62; }
+    .mgf-ellipsis::after {
+      content: '';
+      animation: ellipsis 1.2s step-end infinite;
+    }
+    @keyframes ellipsis {
+      0%   { content: '.'; }
+      33%  { content: '..'; }
+      66%  { content: '...'; }
+      100% { content: ''; }
+    }
+    .mgf-s-complete { color: #7a6448; font-size:13px; }
+
+    /* ── Phase: capture ── */
+    [data-phase="capture"] .mgf-photo    { opacity: 1; filter: none; }
+    [data-phase="capture"] .mgf-vf       { opacity: 1; }
+    [data-phase="capture"] .mgf-scanline { opacity: 0; }
+    [data-phase="capture"] .mgf-gridoverlay { opacity: 0; }
+    [data-phase="capture"] .mgf-avatarbg { opacity: 0; }
+    [data-phase="capture"] .mgf-avatarimg { opacity: 0; transform: scale(0.85); }
+    [data-phase="capture"] .mgf-sparkles span { opacity:0; transform:scale(0); }
+    [data-phase="capture"] .mgf-s-capture    { opacity: 1; }
+    [data-phase="capture"] .mgf-s-processing { opacity: 0; position:absolute; pointer-events:none; }
+    [data-phase="capture"] .mgf-s-complete   { opacity: 0; position:absolute; pointer-events:none; }
+
+    /* ── Phase: processing ── */
+    [data-phase="processing"] .mgf-photo    { opacity: 0.55; filter: brightness(1.15) saturate(0.4); }
+    [data-phase="processing"] .mgf-vf       { opacity: 0; }
+    [data-phase="processing"] .mgf-scanline { opacity: 1; animation: scanDown 2s ease-in-out; }
+    [data-phase="processing"] .mgf-gridoverlay { opacity: 1; }
+    [data-phase="processing"] .mgf-avatarbg { opacity: 0; }
+    [data-phase="processing"] .mgf-avatarimg { opacity: 0; transform: scale(0.85); }
+    [data-phase="processing"] .mgf-sparkles span { opacity:0; transform:scale(0); }
+    [data-phase="processing"] .mgf-s-capture    { opacity: 0; position:absolute; pointer-events:none; }
+    [data-phase="processing"] .mgf-s-processing { opacity: 1; position:static; }
+    [data-phase="processing"] .mgf-s-complete   { opacity: 0; position:absolute; pointer-events:none; }
+    [data-phase="processing"] .mgf-progressfill { width: 100%; }
+
+    /* ── Phase: complete ── */
+    [data-phase="complete"] .mgf-photo    { opacity: 0; }
+    [data-phase="complete"] .mgf-vf       { opacity: 0; }
+    [data-phase="complete"] .mgf-scanline { opacity: 0; }
+    [data-phase="complete"] .mgf-gridoverlay { opacity: 0; }
+    [data-phase="complete"] .mgf-avatarbg { opacity: 1; }
+    [data-phase="complete"] .mgf-avatarimg { opacity: 1; transform: scale(1); }
+    [data-phase="complete"] .mgf-sparkles span { opacity:1; transform:scale(1); }
+    [data-phase="complete"] .mgf-s-capture    { opacity: 0; position:absolute; pointer-events:none; }
+    [data-phase="complete"] .mgf-s-processing { opacity: 0; position:absolute; pointer-events:none; }
+    [data-phase="complete"] .mgf-s-complete   { opacity: 1; position:static; }
+
+    @keyframes scanDown {
+      0%   { top: 0%; }
+      100% { top: 100%; }
+    }
+  </style>
+
+  <script>
+    (function() {
+      const frame = document.getElementById('mgfFrame');
+      if (!frame) return;
+      const phases = ['capture', 'processing', 'complete'];
+      const durations = [2200, 2800, 3000];
+      let idx = 0;
+
+      function tick() {
+        frame.setAttribute('data-phase', phases[idx]);
+        // reset progress bar before processing phase
+        if (phases[idx] === 'processing') {
+          const fill = frame.querySelector('.mgf-progressfill');
+          if (fill) { fill.style.transition = 'none'; fill.style.width = '0%'; }
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            if (fill) fill.style.transition = 'width 2.4s linear';
+          }));
+        }
+        // stagger sparkles on complete
+        if (phases[idx] === 'complete') {
+          frame.querySelectorAll('.mgf-sparkles span').forEach((s, i) => {
+            s.style.transitionDelay = (0.2 + i * 0.12) + 's';
+          });
+        } else {
+          frame.querySelectorAll('.mgf-sparkles span').forEach(s => {
+            s.style.transitionDelay = '0s';
+          });
+        }
+        idx = (idx + 1) % phases.length;
+        setTimeout(tick, durations[(idx + phases.length - 1) % phases.length]);
+      }
+
+      tick();
+    })();
+  </script>
+
+  <!-- 04 FEATURES -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="s-num">04</span>
+      <h2 class="s-title">核心功能</h2>
+    </div>
+    <div class="feature-grid feature-grid--3">
+      <div class="feature-item">
+        <p class="fi-num">F · 01</p>
+        <p class="fi-title">3D 宠物生成与局部编辑</p>
+      </div>
+      <div class="feature-item">
+        <p class="fi-num">F · 02</p>
+        <p class="fi-title">AI 人格化对话系统</p>
+      </div>
+      <div class="feature-item">
+        <p class="fi-num">F · 03</p>
+        <p class="fi-title">互动系统（穿搭 / 家园 / 社区）</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI CHAT DEMO -->
+  <div style="background:#f5ede0; padding:80px var(--margin); display:flex; flex-direction:column; align-items:center; border-top:1px solid #e0d0bc;">
+    <p style="margin:0 0 8px; font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#9a7f62;">AI 人格化对话系统</p>
+    <p style="margin:0 0 48px; font-size:13px; color:#b89878; text-align:center;">它记得你，它懂你，它一直在</p>
+
+    <div class="mchat-phone">
+      <!-- header: simple name + status, no separate avatar -->
+      <div class="mchat-header">
+        <span class="mchat-name">Nana</span>
+        <span class="mchat-status">● 在线</span>
+      </div>
+
+      <!-- messages -->
+      <div class="mchat-body">
+
+        <!-- cat greeting: avatar + smile image + text -->
+        <div class="mchat-row mchat-row--cat">
+          <div class="mchat-face" aria-hidden="true">
+            <img src="assets/mibo-cat-face.png" alt="Nana">
+          </div>
+          <div class="mchat-bubble mchat-bubble--cat mchat-bubble--greeting">
+            <img src="assets/mibo-cat-smile-crop.png" class="mchat-catimg" alt="">
+            <p>你来了！<br>我在这里等你好久了～ 🐾</p>
+          </div>
+        </div>
+
+        <!-- subsequent cat messages: face hidden (indent only) -->
+        <div class="mchat-row mchat-row--user">
+          <div class="mchat-bubble mchat-bubble--user">今天好累，压力好大</div>
+        </div>
+
+        <div class="mchat-row mchat-row--cat">
+          <div class="mchat-face mchat-face--hidden" aria-hidden="true"></div>
+          <div class="mchat-bubble mchat-bubble--cat">
+            我感觉到了。<br>
+            来，先跟我说说，今天发生什么了？
+          </div>
+        </div>
+
+        <div class="mchat-row mchat-row--user">
+          <div class="mchat-bubble mchat-bubble--user">工作上有个方案一直过不了</div>
+        </div>
+
+        <div class="mchat-row mchat-row--cat">
+          <div class="mchat-face" aria-hidden="true">
+            <img src="assets/mibo-cat-face.png" alt="Nana">
+          </div>
+          <div class="mchat-bubble mchat-bubble--cat">
+            那很耗心力。<br>
+            但你知道吗，你每次来找我，<br>
+            我就知道你还没有放弃 🌿
+          </div>
+        </div>
+
+      </div>
+
+      <!-- input bar -->
+      <div class="mchat-inputbar">
+        <div class="mchat-input">说点什么…</div>
+        <div class="mchat-send">↑</div>
+      </div>
+    </div>
+
+  </div>
+
+  <style>
+    .mchat-phone {
+      width: 320px;
+      max-width: 92vw;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(100,60,20,0.16);
+      background: #fffaf5;
+      display: flex;
+      flex-direction: column;
+    }
+    /* header — simple text only */
+    .mchat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      background: #fff8f0;
+      border-bottom: 1px solid #f0dcc8;
+    }
+    .mchat-name { font-size:14px; font-weight:700; color:#5a3e28; }
+    .mchat-status { font-size:10px; color:#c4a882; }
+
+    /* messages */
+    .mchat-body {
+      flex: 1;
+      padding: 20px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .mchat-row { display:flex; align-items:flex-end; gap:8px; }
+    .mchat-row--cat  { justify-content: flex-start; }
+    .mchat-row--user { justify-content: flex-end; }
+
+    .mchat-face {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      overflow: hidden;
+      background-color: #f0e5d4;
+    }
+    .mchat-face img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+    .mchat-face--hidden { visibility: hidden; }
+
+    .mchat-bubble {
+      max-width: 72%;
+      padding: 10px 13px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .mchat-bubble--cat {
+      background: #fff;
+      border: 1px solid #f0dcc8;
+      border-radius: 4px 14px 14px 14px;
+      color: #5a3e28;
+    }
+    .mchat-bubble--user {
+      background: #c4a882;
+      border-radius: 14px 4px 14px 14px;
+      color: #fff;
+    }
+    .mchat-bubble--greeting {
+      padding: 0;
+      overflow: hidden;
+      max-width: 60%;
+    }
+    .mchat-bubble--greeting p {
+      margin: 0;
+      padding: 10px 13px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #5a3e28;
+    }
+    .mchat-catimg {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+      background: #f5ede0;
+      padding: 14px 16px 0;
+    }
+
+    /* input bar */
+    .mchat-inputbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: #fff8f0;
+      border-top: 1px solid #f0dcc8;
+    }
+    .mchat-input {
+      flex: 1;
+      background: #f5ede0;
+      border-radius: 20px;
+      padding: 9px 16px;
+      font-size: 12px;
+      color: #c4a882;
+    }
+    .mchat-send {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: #c4a882;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* mini feature tags */
+    .mchat-tag {
+      background: rgba(196,168,130,0.15);
+      border: 1px solid #e0c8a8;
+      color: #9a7f62;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+    }
+  </style>
+
+  <!-- CAT BREEDS STRIP -->
+  <div class="cat-strip">
+    <div class="cat-strip-item">
+      <img src="assets/mibo-cat-main.png" alt="布偶猫 — 超写实渲染">
+    </div>
+    <div class="cat-strip-item">
+      <img src="assets/mibo-cat-cute.png" alt="无毛猫 — 超写实渲染">
+    </div>
+  </div>
+
+  <!-- CAT HOME ENVIRONMENT -->
+  <div>
+    <img src="assets/mibo-cat-home.png" alt="Mibo — 宠物家园" class="img-full">
+  </div>
+
+  <!-- MOOD DUO — sketch + interior -->
+  <div class="img-half">
+    <img src="assets/mibo-mood-sketch.jpg" alt="" style="object-fit:cover; height:480px;">
+    <img src="assets/mibo-mood-interior.jpg" alt="" style="object-fit:cover; height:480px;">
+  </div>
+
+  <!-- 05 HIGHLIGHT -->
+  <section class="highlight highlight--warm reveal">
+    <p class="hl-label">Design Insight &nbsp;—&nbsp; 设计亮点</p>
+    <p class="hl-text">
+      这是一个<em>「情绪延续型 AI 产品探索」</em>，<br>
+      将<strong>超写实渲染</strong>与<strong>AI 人格化</strong><br>
+      转化为真实可感知的情感价值。
+    </p>
+  </section>
+
+  <!-- NEXT -->
+  <a href="about.html" class="next-card">
+    <p class="nc-label">了解更多</p>
+    <h2 class="nc-title">About Me</h2>
+    <p class="nc-sub">刘美姣 &nbsp;·&nbsp; AI 产品设计者</p>
+    <span class="nc-arrow">查看简介</span>
+  </a>
+
+  <footer>
+    <span class="f-logo">Liu Meijiao</span>
+    <span class="f-copy">AI Product Designer &nbsp;·&nbsp; 2024</span>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 1.1) el.classList.add('visible');
+      });
+    }, 50);
+  </script>
+
+</body>
+</html>
