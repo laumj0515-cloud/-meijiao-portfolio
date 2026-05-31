@@ -244,9 +244,8 @@
   </style>
 
   <script>
-    // ── DeepSeek API 配置 ──
-    const DS_KEY   = 'sk-58674ed5b89d4730806d4cabf9c2c6ec';
-    const DS_URL   = 'https://api.deepseek.com/v1/chat/completions';
+    // ── API 配置（key 存在 Netlify 环境变量，前端不可见）──
+    const DS_URL   = '/api/chat';
     const DS_MODEL = 'deepseek-chat';
 
     // ── AI 人设 System Prompt ──
@@ -329,10 +328,7 @@ GitHub：laumj0515-cloud
       try {
         const res = await fetch(DS_URL, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${DS_KEY}`
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             model: DS_MODEL,
             messages: history,
