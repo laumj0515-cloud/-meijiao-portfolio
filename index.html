@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>刘美姣 — AI 产品设计者</title>
+  <title>刘美姣 · AI 产品设计师</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <nav class="nav">
     <a href="index.html" class="nav-logo">Liu Meijiao</a>
@@ -17,42 +18,85 @@
   </nav>
 
   <!-- HERO -->
-  <section class="home-hero">
+  <section class="home-hero home-hero--gallery">
     <div class="home-hero-inner">
-      <p class="hero-label reveal">AI Application Product Manager &nbsp;·&nbsp; AI 应用产品经理</p>
-      <h1 class="hero-title reveal">
-        让 AI<br>
-        理解人的行动<br>
-        <span class="dim">与情感</span>
-      </h1>
-      <p class="hero-sub reveal">专注 C 端 AI Agent 产品：行为支持 / 情感陪伴 / MVP 落地</p>
+      <div class="hero-copy">
+        <p class="hero-label reveal">AI Application Product Manager &nbsp;·&nbsp; AI 应用产品经理</p>
+        <h1 class="hero-title reveal">
+          让 AI<br>
+          理解人的行动<br>
+          <span class="dim">与情感</span>
+        </h1>
+        <p class="hero-sub reveal">专注 C 端 AI Agent 产品：行为支持 / 情感陪伴 / 面试训练 / 数据洞察。</p>
+      </div>
+
+      <div class="hero-stage reveal" data-depth>
+        <img src="assets/portfolio-hero.png" alt="AI product gallery visual">
+        <div class="hero-stage-card hero-stage-card--top">
+          <span>01</span>
+          <strong>Behavior Support</strong>
+        </div>
+        <div class="hero-stage-card hero-stage-card--bottom">
+          <span>02</span>
+          <strong>Emotional Companion</strong>
+        </div>
+      </div>
     </div>
     <div class="hero-scroll-hint reveal">Scroll to projects</div>
   </section>
 
   <!-- PROJECT CARDS -->
-  <section class="projects-grid" id="projects">
+  <section class="projects-showcase" id="projects">
+    <div class="showcase-heading reveal">
+      <p>Selected Works</p>
+      <h2>Two main systems, built around action and emotion.</h2>
+    </div>
 
-    <a href="tempo.html" class="pc pc--tempo">
-      <span class="pc-ghost">01</span>
-      <p class="pc-num">01 — 主项目</p>
-      <h2 class="pc-title">Tempo</h2>
-      <p class="pc-sub">AI 任务拆解与执行辅助系统，将"启动困难"转化为最小行动单位设计问题。</p>
-      <p class="pc-tag">已落地 &nbsp;·&nbsp; ADHD &nbsp;·&nbsp; 执行辅助</p>
-      <span class="pc-arrow">查看案例</span>
-    </a>
+    <div class="projects-grid projects-grid--cinematic">
+      <a href="tempo.html" class="pc pc--tempo pc--visual" style="--preview:url('assets/portfolio-tempo-stage.png')">
+        <span class="pc-ghost">01</span>
+        <div class="pc-visual" aria-hidden="true"></div>
+        <p class="pc-num">01 · 主项目</p>
+        <h2 class="pc-title">Tempo</h2>
+        <p class="pc-sub">AI 任务拆解与执行辅助系统，把启动困难转化为“最小行动单位”的产品设计问题。</p>
+        <p class="pc-tag">已落地 · ADHD · 执行辅助</p>
+        <span class="pc-arrow">查看案例</span>
+      </a>
 
-    <a href="mibo.html" class="pc pc--mibo">
-      <span class="pc-ghost">02</span>
-      <p class="pc-num">02 — 视觉项目</p>
-      <h2 class="pc-title">Mibo</h2>
-      <p class="pc-sub">AI 宠物复活与情感陪伴系统，用数字形态让失去的宠物回到用户生活中。</p>
-      <p class="pc-tag">概念产品 &nbsp;·&nbsp; 情感陪伴 &nbsp;·&nbsp; AIGC</p>
-      <span class="pc-arrow">查看案例</span>
-    </a>
-
+      <a href="mibo.html" class="pc pc--mibo pc--visual" style="--preview:url('assets/portfolio-mibo-stage.png')">
+        <span class="pc-ghost">02</span>
+        <div class="pc-visual" aria-hidden="true"></div>
+        <p class="pc-num">02 · 情感项目</p>
+        <h2 class="pc-title">Mibo</h2>
+        <p class="pc-sub">AI 情感陪伴智能体，通过数字生命、记忆与互动系统延续人与宠物之间的情感连接。</p>
+        <p class="pc-tag">概念产品 · 情感陪伴 · AIGC</p>
+        <span class="pc-arrow">查看案例</span>
+      </a>
+    </div>
   </section>
 
+  <section class="labs-showcase reveal">
+    <div class="labs-visual">
+      <img src="assets/portfolio-labs-overview.png" alt="Product Labs archive visual">
+    </div>
+    <div class="labs-copy">
+      <p class="labs-label">Product Labs</p>
+      <h2>More AI product experiments.</h2>
+      <p>除了 Tempo 和 Mibo，我也在持续探索面试训练、趋势监测和更多 Agent 工作流项目。</p>
+      <div class="labs-list">
+        <button class="lab-item" type="button" data-lab-preview="assets/portfolio-ai-pm.png">
+          <span>03</span>
+          <strong>AI PM Coach</strong>
+          <em>Interview training · memory · feedback loop</em>
+        </button>
+        <button class="lab-item" type="button" data-lab-preview="assets/portfolio-trendpulse.png">
+          <span>04</span>
+          <strong>TrendPulse</strong>
+          <em>Trend intelligence · data dashboard · automation</em>
+        </button>
+      </div>
+    </div>
+  </section>
   <footer>
     <span class="f-logo">Liu Meijiao</span>
     <span class="f-copy">AI Product Designer &nbsp;·&nbsp; 2024</span>
@@ -68,6 +112,37 @@
         if (el.getBoundingClientRect().top < window.innerHeight * 1.1) el.classList.add('visible');
       });
     }, 50);
+
+    const cursorGlow = document.querySelector('.cursor-glow');
+    if (cursorGlow && window.matchMedia('(pointer:fine)').matches) {
+      window.addEventListener('pointermove', e => {
+        document.body.classList.add('cursor-ready');
+        cursorGlow.style.transform = `translate3d(${e.clientX - 180}px, ${e.clientY - 180}px, 0)`;
+      }, { passive: true });
+    }
+
+    const depthStage = document.querySelector('[data-depth]');
+    if (depthStage && window.matchMedia('(pointer:fine)').matches) {
+      depthStage.addEventListener('pointermove', e => {
+        const rect = depthStage.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width - 0.5) * 10;
+        const y = ((e.clientY - rect.top) / rect.height - 0.5) * -10;
+        depthStage.style.transform = `perspective(1200px) rotateY(${x}deg) rotateX(${y}deg)`;
+      });
+      depthStage.addEventListener('pointerleave', () => {
+        depthStage.style.transform = 'none';
+      });
+    }
+
+    const labsImage = document.querySelector('.labs-visual img');
+    document.querySelectorAll('[data-lab-preview]').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        if (labsImage) labsImage.src = item.dataset.labPreview;
+      });
+      item.addEventListener('mouseleave', () => {
+        if (labsImage) labsImage.src = 'assets/portfolio-labs-overview.png';
+      });
+    });
   </script>
 
   <!-- ══════════════════════════════════════

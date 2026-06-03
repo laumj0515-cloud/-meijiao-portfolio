@@ -84,6 +84,89 @@
     <img src="assets/mibo-hero.png" alt="Mibo — 产品展示" class="img-full">
   </div>
 
+  <!-- PRODUCT INTERFACE CAROUSEL -->
+  <section class="section mibo-interface-showcase reveal" aria-label="Mibo 产品界面滑动演示">
+    <div class="mi-copy">
+      <p class="mi-label">Product interface</p>
+      <h2>从 AI 识别，到精细校准</h2>
+      <p>
+        照片识别捕捉初始形象，基因工坊继续校准品种、毛色与关键特征，让复刻结果更接近记忆里的样子。
+      </p>
+    </div>
+
+    <div class="mi-carousel" data-mibo-carousel>
+      <div class="mi-viewport" tabindex="0" aria-label="Mibo interface slides">
+        <div class="mi-track">
+          <article class="mi-slide">
+            <img src="assets/mibo-ui-upload.png" alt="Mibo 上传照片创建宠物界面">
+            <div class="mi-caption">
+              <span>01</span>
+              <strong>照片识别</strong>
+              <em>捕捉初始形象</em>
+            </div>
+          </article>
+          <article class="mi-slide mi-slide--workshop" aria-label="Mibo 基因工坊手捏界面">
+            <div class="mi-phone-top">
+              <span>Mibo</span>
+              <i></i>
+            </div>
+            <img src="assets/mibo-cat-abyssinian-crop.png" alt="Mibo 中央猫咪生成预览" class="mi-workshop-cat">
+            <div class="mi-workshop-tools">
+              <div class="mi-tool-rail" aria-hidden="true">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <img src="assets/mibo-workshop-breeds.png" alt="Mibo 品种猫图形选择列表" class="mi-breed-sheet">
+            </div>
+            <div class="mi-caption">
+              <span>02</span>
+              <strong>基因工坊</strong>
+              <em>精细校准</em>
+            </div>
+          </article>
+          <article class="mi-slide">
+            <img src="assets/mibo-ui-generate.png" alt="Mibo AI 生成数字宠物界面">
+            <div class="mi-caption">
+              <span>03</span>
+              <strong>生成时刻</strong>
+              <em>AI 复刻</em>
+            </div>
+          </article>
+          <article class="mi-slide">
+            <img src="assets/mibo-ui-meet.png" alt="Mibo 初次见面界面">
+            <div class="mi-caption">
+              <span>04</span>
+              <strong>初次回应</strong>
+              <em>情绪确认</em>
+            </div>
+          </article>
+          <article class="mi-slide">
+            <img src="assets/mibo-ui-plaza.png" alt="Mibo 宠物广场界面">
+            <div class="mi-caption">
+              <span>05</span>
+              <strong>宠物广场</strong>
+              <em>日常陪伴</em>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="mi-controls">
+        <button type="button" class="mi-arrow" data-mibo-prev aria-label="上一张">‹</button>
+        <div class="mi-dots" aria-label="滑动进度">
+          <button type="button" class="active" data-mibo-dot="0" aria-label="第 1 张"></button>
+          <button type="button" data-mibo-dot="1" aria-label="第 2 张"></button>
+          <button type="button" data-mibo-dot="2" aria-label="第 3 张"></button>
+          <button type="button" data-mibo-dot="3" aria-label="第 4 张"></button>
+          <button type="button" data-mibo-dot="4" aria-label="第 5 张"></button>
+        </div>
+        <button type="button" class="mi-arrow" data-mibo-next aria-label="下一张">›</button>
+      </div>
+    </div>
+  </section>
+
   <!-- CAT SPOTLIGHT -->
   <div class="cat-spotlight" style="position:relative;">
     <img src="assets/mibo-cat-main.png" alt="Mibo — 3D 数字宠物">
@@ -717,6 +800,42 @@
   </footer>
 
   <script>
+    document.querySelectorAll('[data-mibo-carousel]').forEach(carousel => {
+      const viewport = carousel.querySelector('.mi-viewport');
+      const slides = Array.from(carousel.querySelectorAll('.mi-slide'));
+      const dots = Array.from(carousel.querySelectorAll('[data-mibo-dot]'));
+      const prev = carousel.querySelector('[data-mibo-prev]');
+      const next = carousel.querySelector('[data-mibo-next]');
+      let index = 0;
+
+      const setActive = nextIndex => {
+        index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+        dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index));
+      };
+
+      const goTo = nextIndex => {
+        setActive(nextIndex);
+        const targetLeft = slides[index].offsetLeft - slides[0].offsetLeft;
+        viewport?.scrollTo({ left: targetLeft, behavior: 'smooth' });
+      };
+
+      prev?.addEventListener('click', () => goTo(index - 1));
+      next?.addEventListener('click', () => goTo(index + 1));
+      dots.forEach(dot => dot.addEventListener('click', () => goTo(Number(dot.dataset.miboDot))));
+
+      viewport?.addEventListener('scroll', () => {
+        window.requestAnimationFrame(() => {
+          const center = viewport.scrollLeft + viewport.clientWidth / 2;
+          const nearest = slides.reduce((best, slide, slideIndex) => {
+            const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+            const distance = Math.abs(center - slideCenter);
+            return distance < best.distance ? { slideIndex, distance } : best;
+          }, { slideIndex: index, distance: Infinity });
+          setActive(nearest.slideIndex);
+        });
+      }, { passive: true });
+    });
+
     const io = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.05 });
